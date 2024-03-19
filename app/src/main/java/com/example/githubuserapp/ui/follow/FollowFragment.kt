@@ -1,13 +1,14 @@
-package com.example.githubuserapp
+package com.example.githubuserapp.ui.follow
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.githubuserapp.R
 
 
-class HomeFragment : Fragment() {
+class FollowFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -24,13 +25,13 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        return inflater.inflate(R.layout.fragment_follow, container, false)
     }
 
     companion object {
-        @JvmStatic
+
         fun newInstance(param1: String, param2: String) =
-            HomeFragment().apply {
+            FollowFragment().apply {
                 arguments = Bundle().apply {
 
                 }

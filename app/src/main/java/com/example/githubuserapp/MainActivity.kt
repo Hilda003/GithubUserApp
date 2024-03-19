@@ -8,6 +8,9 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 import com.example.githubuserapp.databinding.ActivityMainBinding
+import com.example.githubuserapp.ui.favorite.FavoriteFragment
+import com.example.githubuserapp.ui.home.HomeFragment
+import com.example.githubuserapp.ui.setting.SettingFragment
 
 
 class MainActivity : AppCompatActivity() {
