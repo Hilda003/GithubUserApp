@@ -1,4 +1,4 @@
 package com.example.core.data
 
-class ApiService {
+class DataLocal() {
 }

@@ -42,14 +42,24 @@ android {
 
 dependencies {
 
-    project(":core")
+    implementation(project(":core"))
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.material)
+    implementation(libs.koin.core)
+    implementation(libs.koin.viewmodel)
+    implementation(libs.koin)
+    implementation(libs.viewmodel)
+    implementation(libs.viewmodel.runtime)
+    implementation(libs.viewmodel.savedstate)
+    implementation(libs.viewmodel.common)
+    implementation(libs.viewmodel.ext)
     implementation (libs.hdodenhof.circleimageview)
+
+    implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.2.0")
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
