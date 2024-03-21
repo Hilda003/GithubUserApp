@@ -49,21 +49,36 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <SearchView
-                android:id="@+id/editTextText"
+                android:id="@+id/searchView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+
                 android:ems="10"
                 android:background="@drawable/edit_background"
                 android:inputType="text"
                 android:layout_margin="20dp"
-                />
+                >
+
+            </SearchView>
+
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:padding="10dp"
                 tools:listitem="@layout/item_row_user"
-                />
+                >
+
+            </androidx.recyclerview.widget.RecyclerView>
+
         </LinearLayout>
+
     </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

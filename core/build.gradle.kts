@@ -1,6 +1,9 @@
 plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    id("kotlin-parcelize")
+    id("kotlin-kapt")
+
 }
 
 android {
@@ -30,6 +33,10 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        viewBinding = true
+        dataBinding = true
+    }
 }
 
 dependencies {
@@ -39,13 +46,13 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.retrofit)
-    implementation(libs.koin)
     implementation(libs.okhttp.logging.interceptor)
     implementation(libs.retrofit.converter.gson)
-    implementation(libs.koin.core)
-    implementation(libs.koin.viewmodel)
+    implementation (libs.hdodenhof.circleimageview)
+    implementation(libs.glide)
     implementation(libs.okhttp)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    implementation ("org.koin:koin-androidx-viewmodel:3.1.2")
 }

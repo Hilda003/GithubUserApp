@@ -15,7 +15,7 @@ import com.example.githubuserapp.ui.setting.SettingFragment
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding: com.example.githubuserapp.databinding.ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         binding = ActivityMainBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)

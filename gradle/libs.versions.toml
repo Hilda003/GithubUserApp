@@ -2,7 +2,9 @@
 agp = "8.3.0"
 circleimageviewVersion = "3.1.0"
 
-kotlin = "1.9.0"
+glide = "4.16.0"
+koinAndroidViewmodel = "3.1.2"
+kotlin = "1.9.20"
 coreKtx = "1.12.0"
 junit = "4.13.2"
 junitVersion = "1.1.5"
@@ -15,16 +17,30 @@ annotation = "1.7.1"
 retrofit = "2.9.0"
 okhttp = "4.9.1"
 koins = "3.3.2"
-viewmodel = "2.7.0"
+viewmodel = "2.7.7"
+kapt = "1.9.20"
 
 
 [libraries]
-androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+
+glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
 hdodenhof-circleimageview = { module = "de.hdodenhof:circleimageview", version.ref = "circleimageviewVersion" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+
+# Koin
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+koin = { group = "io.insert-koin", name = "koin-core", version.ref = "koins" }
+koin_android = { group = "io.insert-koin", name = "koin-android", version.ref = "koins" }
+koin_android_viewmodel = { group = "io.insert-koin", name = "koin-androidx-viewmodel", version.ref = "koinAndroidViewmodel" }
+life_cycle = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-savedstate", version.ref = "viewmodel" }
+koin_fragment = { group = "io.insert-koin", name = "koin-androidx-fragment", version.ref = "koins" }
+koin_scope = { group = "io.insert-koin", name = "koin-androidx-scope", version.ref = "koins" }
+koin_compat = { group = "io.insert-koin", name = "koin-androidx-compat", version.ref = "koins" }
+
+
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
@@ -33,14 +49,14 @@ retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = 
 retrofit-converter-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
 okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp"}
 okhttp-logging-interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp"}
-koin = { group = "io.insert-koin", name = "koin-android", version.ref = "koins"}
-koin_viewmodel = { group = "io.insert-koin", name = "koin-androidx-viewmodel", version.ref = "koins"}
-koin_core = { group = "io.insert-koin", name = "koin-core", version.ref = "koins"}
+
 viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "viewmodel"}
 viewmodel_runtime = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "viewmodel"}
 viewmodel_savedstate = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-savedstate", version.ref = "viewmodel"}
 viewmodel_common = { group = "androidx.lifecycle", name = "lifecycle-common-java8", version.ref = "viewmodel"}
 viewmodel_ext = { group = "androidx.lifecycle", name = "lifecycle-extensions", version.ref = "viewmodel"}
+navigation_fragment = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "viewmodel"}
+navigation_ui = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "viewmodel"}
 
 
 
@@ -50,4 +66,6 @@ androidApplication = { id = "com.android.application", version.ref = "agp" }
 jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 androidLibrary = { id = "com.android.library", version.ref = "agp" }
 androidDynamicFeature = { id = "com.android.dynamic-feature", version.ref = "agp" }
+androidKapt = { id = "kotlin-kapt", version.ref = "kapt" }
+parcelize = { id = "kotlin-parcelize", version.ref = "kotlin" }
 
